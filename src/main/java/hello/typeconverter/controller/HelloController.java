@@ -12,7 +12,7 @@ public class HelloController {
     @GetMapping("/hello-v1")
     public String helloV1(HttpServletRequest request) {
         String data = request.getParameter("data"); // 문자 타입으로 조회
-        Integer intValue = Integer.valueOf(data); // 숫자 타입으로 변경
+        int intValue = Integer.parseInt(data); // 숫자 타입으로 변경
         System.out.println("intValue = " + intValue);
         return "ok";
     }
